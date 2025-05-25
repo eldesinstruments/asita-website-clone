@@ -1,0 +1,30 @@
+{
+  "buildCommand": "bun run build",
+  "framework": "nextjs",
+  "installCommand": "bun install",
+  "images": {
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "source.unsplash.com"
+      },
+      {
+        "protocol": "https", 
+        "hostname": "images.unsplash.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "ext.same-assets.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "ugc.same-assets.com"
+      }
+    ]
+  },
+  "functions": {
+    "src/app/**/*.{js,ts,jsx,tsx}": {
+      "runtime": "@vercel/node@2"
+    }
+  }
+}
